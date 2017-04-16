@@ -22,6 +22,9 @@ request = pc.makeRequestRSpec()
 # Add a raw PC to the request.
 node = request.RawPC("node")
 
+# Request the desired hardware type
+node.hardware_type = "c220g2"
+
 # Install and execute a script that is contained in the repository.
 node.addService(pg.Execute(shell="sh", command="/local/repository/initialize-cloudlab.sh"))
 
