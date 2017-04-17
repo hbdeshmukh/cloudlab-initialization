@@ -27,7 +27,7 @@ node = request.RawPC("node-2")
 node.hardware_type = "c220g2"
 
 # Install and execute a script that is contained in the repository.
-node.addService(rspec.Execute(shell="sh", command="/local/repository/initialize-cloudlab.sh"))
+node.addService(pg.Execute(shell="sh", command="/local/repository/initialize-cloudlab.sh"))
 
 # Print the RSpec to the enclosing page.
 pc.printRequestRSpec(request)
